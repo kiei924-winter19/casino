@@ -1,0 +1,17 @@
+<% 
+
+die1 = rand(1..6)
+die2 = rand(1..6)
+total = die1 + die2
+ 
+
+%>
+
+<p>
+    <img src="http://golearntocode.com/images/dice/<%= die1 %>.png">
+    <img src="http://golearntocode.com/images/dice/<%= die2 %>.png">
+</p>
+
+<p>
+    The total is <%= total %>. <a class="btn btn-success" href="/dice/roll">Roll again?</a>
+</p>

@@ -1,0 +1,23 @@
+<%
+  deck = []
+  ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "jack", "queen", "king", "ace"]
+  suits = ["clubs", "diamonds", "hearts", "spades"]
+  
+  for rank in ranks
+    for suit in suits
+      deck << "#{rank}_of_#{suit}"
+    end
+  end
+  
+  shuffled_deck = deck.shuffle
+  
+  hand = shuffled_deck.slice(0, 5)
+%>
+
+<div class="row">
+  <% for card in hand %>
+    <div class="col-sm-2"><img class="img-fluid" src="http://golearntocode.com/images/cards/<%= card %>.png"></div>
+  <% end %>
+</div>
+
+<p><a class="btn btn-success" href="/cards/deal">Play Again</a></p>
